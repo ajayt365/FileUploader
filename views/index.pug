@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title="Uploads"
+		link(rel="stylesheet", href="/css/style.css")
+
+	body
+		h1 "Upload Files"
+		form.card(action='/api/v1/pdfs/upload' method="post" enctype="multipart/form-data")
+			.form-group
+				label(for="name") Name
+				input(type="text", name="name" placehoder="Your Name" required)
+			.form-group
+				label Upload File :
+				input(type="file", name="pdf"  required) 
+			//- ned to work on this acceptr accept="application/pdf"
+			input(type="submit", value="Submit")
+
+
+			
+	
